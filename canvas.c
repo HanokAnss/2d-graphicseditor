@@ -14,25 +14,20 @@ void canvas_clear(void){
     canvas_init();
 }
 
-void canvas_display(void){
+void canvas_display(void) {
     printf("+");
-    for (int c = 0; c < COLS; c++){
-        printf("-");
-        printf("+\n");
-    }
-}
+    for (int c = 0; c < COLS; c++) printf("-");
+    printf("+\n");
 
-for (int r = 0; r < ROWS; r++){
-    printf("|");
-    for (int c = 0; c < COLS; c++){
-        putchar(canvas[r][c]);
+    for (int r = 0; r < ROWS; r++) {
+        printf("|");
+        for (int c = 0; c < COLS; c++)
+            putchar(canvas[r][c]);
+        printf("|\n");
     }
-    printf("|\n");
-}
 
-printf("+");
-for (int c = 0; c < COLS;c++){
-    printf("-");
+    printf("+");
+    for (int c = 0; c < COLS; c++) printf("-");
     printf("+\n");
 }
 
